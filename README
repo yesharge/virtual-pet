@@ -1,0 +1,16 @@
+The virtual pet will have begin with a level 50 for each mood/instance variable.
+0 indicates that pet is satisfied, 100 indicates the pet needs immediate attention
+A pet's level cannot surpass 100 or be less than 0. Will receive a message to choose another option.
+
+Instance variables:
+	hunger, thirst, waste, boredom, sickness
+
+Methods:
+1. feedMe()
+	-when this method is called hunger is decreased by 50 and thirst 
+	is decreased by 30. 
+2. playWithMe()
+	-when this method is called boredom is decreased by 30 and tiredness is increased by 25
+	-if tiredness is >90, pet cannot play
+3. sleep() 
+	- tiredness is decreased by 45
