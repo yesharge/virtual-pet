@@ -1,16 +1,24 @@
-The virtual pet will have begin with a level 50 for each mood/instance variable.
-0 indicates that pet is satisfied, 100 indicates the pet needs immediate attention
-A pet's level cannot surpass 100 or be less than 0. Will receive a message to choose another option.
+The virtual pet will begin with a random level for each mood/instance variable.
+0 indicates that the pet needs immediate attention, 100 indicates the pet is satisfied.
+Points will not be added if a pet's level will surpass 100 or dip below 0.
 
 Instance variables:
-	hunger, thirst, waste, boredom, sickness
+	hunger, tiredness, boredom, sickness, selfCare
 
 Methods:
 1. feedMe()
-	-when this method is called hunger is decreased by 50 and thirst 
-	is decreased by 30. 
+	-when this method is called hunger is increased by 50.
 2. playWithMe()
-	-when this method is called boredom is decreased by 30 and tiredness is increased by 25
+	-when this method is called boredom is increased by 45 
+	-tiredness is decreased by 35
+	-sickness is decreased by 10
+	-hunger is decreased by 30
 	-if tiredness is >90, pet cannot play
 3. sleep() 
-	- tiredness is decreased by 45
+	- tiredness is increased by 45
+	- hunger is decreased by 30
+4. takeToDoctor() 
+	-sickness is increased by 75
+5. tick()
+	-there is a random number generator that will reset every loop. If the number is equal to 3 the pet will be ran over by a car.
+	If the random number is equal to 5, boredom and tiredness will increase by 10 and hunger and sickness will decrease by 10.
