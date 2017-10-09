@@ -1,14 +1,15 @@
 import java.util.Random;
 
 public class VirtualPet {
-	//Instance Variables
+	// Instance Variables
 	private int hunger;
 	private int boredom;
 	private int sickness;
 	private int tiredness;
 	private int selfCare;
 	Random random = new Random();
-//Constructor
+
+	// Constructor
 	public VirtualPet() {
 
 		this.hunger = random.nextInt(100) + 1;
@@ -18,7 +19,7 @@ public class VirtualPet {
 	}
 
 	public void feedMe() {
-		if (hunger <=50) {
+		if (hunger <= 50) {
 			hunger += 50;
 		}
 	}
@@ -43,19 +44,19 @@ public class VirtualPet {
 	}
 
 	public void sleep() {
-		if (tiredness <=55) {
-		tiredness += 45;
-		selfCare += 1;
+		if (tiredness <= 55) {
+			tiredness += 45;
+			selfCare += 1;
 		}
-		if (hunger>=30) {
-		hunger-=30;
+		if (hunger >= 30) {
+			hunger -= 30;
 		}
 	}
 
 	public void takeToDoctor() {
-		if (sickness<=25) {
-		sickness += 75;
-		selfCare += 1;
+		if (sickness <= 25) {
+			sickness += 75;
+			selfCare += 1;
 		}
 	}
 
@@ -66,18 +67,18 @@ public class VirtualPet {
 			System.exit(0);
 		}
 		if (selfCare == 5) {
-			if (hunger>=10) {
-			hunger -= 10;
+			if (hunger >= 10) {
+				hunger -= 10;
 			}
-			if (boredom>=10)  {
-			boredom += 10; 
+			if (boredom >= 10) {
+				boredom += 10;
 			}
 			if (sickness >= 10) {
-			sickness -= 10;
+				sickness -= 10;
 			}
-			if (tiredness >10) {
-			tiredness += 10;
-		}
+			if (tiredness > 10) {
+				tiredness += 10;
+			}
 		}
 	}
 

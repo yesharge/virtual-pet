@@ -13,6 +13,7 @@ public class VirtualPetApp {
 		System.out.println("Hunger: " + pet.hunger() + "\nBoredom: " + pet.boredom() + "\nSickness: " + pet.sickness()
 				+ "\nTiredness: " + pet.tiredness());
 		System.out.println();
+		
 		String userInput;
 		do {
 			System.out.println("What do you want to do? " + "\n1. Feed " + petName + "\n2. Play with " + petName
@@ -22,7 +23,7 @@ public class VirtualPetApp {
 			pet.tick();
 			if (userInput.equals("1")) {
 				pet.feedMe();
-		}
+			}
 
 			if (userInput.equals("2")) {
 				pet.playWithMe();
@@ -30,26 +31,26 @@ public class VirtualPetApp {
 
 			if (userInput.equals("3")) {
 				pet.sleep();
-			} 
+			}
 			if (userInput.equals("4")) {
 				pet.takeToDoctor();
-			} 
+			}
 			if (userInput.equals("5")) {
 				System.out.println("Hunger: " + pet.hunger() + "\nBoredom: " + pet.boredom() + "\nSickness: "
 						+ pet.sickness() + "\nTiredness: " + pet.tiredness());
 				System.out.println();
 			}
-			if (pet.hunger() <=30) {
+			if (pet.hunger() <= 30) {
 				System.out.println(petName + " is getting hungry! Feed them asap!");
 			}
-			if (pet.tiredness() <=25) {
+			if (pet.tiredness() <= 25) {
 				System.out.println(petName + " is really tired. Nap time");
 			}
 			if (pet.sickness() <= 5) {
 				System.out.println(petName + " is really ill. " + petName + " should see a doctor soon.");
 			}
-			if(pet.boredom() <= 30) {
-				System.out.println(petName+" is get lonely. Play time!");
+			if (pet.boredom() <= 30) {
+				System.out.println(petName + " is get lonely. Play time!");
 			}
 
 		} while (!userInput.equals("6"));
